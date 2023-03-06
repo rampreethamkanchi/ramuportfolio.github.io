@@ -1,0 +1,179 @@
+/* using a coding background image for whole website */
+body {
+    background-image: url(https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-repeat: repeat-y;
+    background-size: contain;
+    backdrop-filter: blur(1px);
+}
+
+/* CSS for navigation bar on the top of website */
+/* making the position of navbar to stick at the top */
+.navbar {
+    display: flex;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0px;
+    background-color: rgb(38 10 33 / 1);
+    border-radius: 20px;
+    margin: 16px;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navitem {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbox {
+    width: 220px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.navitem:hover {
+    color: red;
+}
+
+/* using a media queiry to make the website responsive */
+@media (max-width:1100px) {
+    .navbar {
+        display: none;
+    }
+}
+
+/* CSS for the introduction box in website */
+/* using a flex box and wrapping for making the website responsive */
+#introbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#introimg {
+    width: 100%;
+    border: 0.5px solid white;
+}
+
+.introinfo {
+    width: 700px;
+    background-color: bisque;
+    border: 2px solid black;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 10px 15px 15px orange;
+    text-align: justify;
+    animation-name: ramu;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite;
+}
+
+/* using keyframes for animation (background color variation in this case) */
+@keyframes ramu {
+    0% {
+        background-color: rgb(247, 216, 179);
+    }
+
+    33% {
+        background-color: rgb(224, 238, 70);
+    }
+
+    66% {
+        background-color: rgb(154, 207, 233);
+    }
+
+    100% {
+        background-color: bisque;
+    }
+}
+
+/* CSS for the for the four content boxes in website */
+/* CSS for headings of all content boxes. */
+.contentheader {
+    text-align: center;
+    font-family: 'Chela One', cursive;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+/* dividing 4 boxes into 2 classes ( one will float on left, other on right) */
+.contentbox1 {
+    box-sizing: border-box;
+    width: 85%;
+    background-color: rgb(245, 247, 127);
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 16px;
+    margin: 55px 55px;
+    float: left;
+    overflow: auto;
+}
+
+.contentbox2 {
+    box-sizing: border-box;
+    width: 85%;
+    background-color: rgb(221, 236, 239);
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 16px;
+    margin: 32px 55px;
+    float: right;
+    overflow: auto;
+}
+
+/* this class is for the contentbox2 without headings */
+/* using a flex box and wrapping for making the website responsive */
+.clgcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* this class is for the content of contentbox2  */
+.content {
+    font-size: 1.25em;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 200;
+}
+
+/* using a media queiry to make the website responsive */
+@media (max-width:610px) {
+    #img5 {
+        display: none;
+    }
+
+    #img6 {
+        display: none;
+    }
+
+    #img7 {
+        display: none;
+    }
+}
+
+/* CSS for the footer containing links to my social-media profiles */
+/* using a flex box and wrapping for making the website responsive */
+/* using overflow:auto to prevent content from overflowing out of box (making it responsive). */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 450px;
+    color: white;
+    clear: both;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: auto;
+}
+
+.footer {
+    width: 500px;
+    text-align: center;
+}
